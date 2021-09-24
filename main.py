@@ -96,3 +96,4 @@ for i in fff:
 jsonstr = json.dumps(output)
 a = open("weekly.json",mode='w',encoding='utf-8')
 a.write(jsonstr)
+
