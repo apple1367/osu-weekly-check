@@ -27,7 +27,13 @@ for i in usertemp:
 
 beatmaplist = find_beatmap_number("songlist.txt")
 
-output = []
+try:
+	output = []
+	exsisting_file = open('weekly.json','r',encoding='utf-8')
+	jsonString = exsisting_file.read().replace("\\",'')
+	output = json.loads(jsonString)
+except:
+	output = []
 
 def getscore(username):
 	errorcount = 0
